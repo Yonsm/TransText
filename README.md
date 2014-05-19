@@ -16,8 +16,8 @@ TransText
 
 ##下载##
 
-[猛击这里](Release/TransText.exe)
+[猛击这里](https://raw.githubusercontent.com/Yonsm/TransText/master/Release/TransText.exe)
 
 ##更多##
 
-请转到 [](http://yonsm.net/transtext/)
+请转到 [http://yonsm.net/transtext](http://yonsm.net/transtext)
