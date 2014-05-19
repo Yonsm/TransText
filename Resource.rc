@@ -1,0 +1,238 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "Define.h"
+#include <WinRes.h>
+
+#ifndef APSTUDIO_INVOKED
+#define AFX_RESOURCE_DLL
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""Define.h""\r\n"
+    "#include <WinRes.h>\r\n"
+    "\r\n"
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#define AFX_RESOURCE_DLL\r\n"
+    "#endif\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""Resource\\\\VER.rc2""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_Main                ICON                    "Resource\\Main.ico"
+IDI_Fetch               ICON                    "Resource\\Fetch.ico"
+IDI_Trans               ICON                    "Resource\\Trans.ico"
+IDI_Search              ICON                    "Resource\\Search.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Main DIALOGEX 0, 0, 239, 297
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "TransText"
+FONT 9, "MS Shell Dlg", 400, 0, 0x86
+BEGIN
+    CONTROL         "",IDC_Tab,"SysTabControl32",WS_CLIPSIBLINGS | WS_TABSTOP,4,4,231,109
+    GROUPBOX        "字符串格式",IDC_STATIC,4,121,231,53
+    CONTROL         "个数(&A)",IDC_LeadCount,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,9,143,40,10,WS_EX_TRANSPARENT
+    CONTROL         "长度(&B)",IDC_LeadSize,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,54,143,40,10,WS_EX_TRANSPARENT
+    CONTROL         "ASC&II",IDC_ASCII,"Button",BS_AUTORADIOBUTTON,108,131,39,10,WS_EX_TRANSPARENT
+    CONTROL         "UTF-&8",IDC_UTF8,"Button",BS_AUTORADIOBUTTON,108,143,39,10,WS_EX_TRANSPARENT
+    CONTROL         "UTF-1&6",IDC_UTF16,"Button",BS_AUTORADIOBUTTON,108,155,39,10,WS_EX_TRANSPARENT
+    LTEXT           "结尾(&D):",IDC_STATIC,167,144,29,10,0,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_EndChar,199,143,30,92,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "TransText",IDC_Brand,4,182,88,19,WS_DISABLED
+    DEFPUSHBUTTON   "确定",IDOK,102,184,42,15,WS_DISABLED
+    PUSHBUTTON      "关于(&A)",IDC_About,147,184,42,15
+    PUSHBUTTON      "退出(&X)",IDCANCEL,192,184,42,15
+    EDITTEXT        IDC_Log,0,212,238,84,ES_MULTILINE | ES_AUTOHSCROLL | ES_NOHIDESEL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_Fetch DIALOGEX 0, 0, 227, 89
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+CAPTION "提取"
+FONT 9, "MS Shell Dlg", 400, 0, 0x86
+BEGIN
+    ICON            IDI_Fetch,IDC_STATIC,6,7,20,20,0,WS_EX_TRANSPARENT
+    LTEXT           "TransText 将从指定路径（支持通配符）中提取字符串，并按特定格式写入到翻译文件中。",IDC_STATIC,37,7,182,19,0,WS_EX_TRANSPARENT
+    LTEXT           "路径(&P):",IDC_STATIC,6,36,28,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_Path,37,35,130,13,ES_AUTOHSCROLL | ES_NOHIDESEL
+    PUSHBUTTON      "...",IDC_Browse,169,35,13,12,BS_FLAT
+    CONTROL         "递归(&R)",IDC_Recursive,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,36,36,10
+    LTEXT           "排除(&E):",IDC_STATIC,6,56,28,8
+    EDITTEXT        IDC_Exclude,37,54,145,13,ES_AUTOHSCROLL | ES_NOHIDESEL
+    LTEXT           "特定 PE 段",IDC_STATIC,185,56,37,8,0,WS_EX_TRANSPARENT
+    LTEXT           "最少(&M):",IDC_STATIC,6,75,28,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_MinCount,37,73,27,13,ES_AUTOHSCROLL | ES_NOHIDESEL,WS_EX_ACCEPTFILES
+    CONTROL         "",IDC_MinCountSpin,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,57,73,9,13
+    LTEXT           "个字符",IDC_STATIC,67,75,28,8,0,WS_EX_TRANSPARENT
+    CONTROL         "仅提取英文字符串(&I)",IDC_EnglishOnly,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,108,75,74,10,WS_EX_TRANSPARENT
+END
+
+IDD_Trans DIALOGEX 0, 0, 227, 100
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+CAPTION "回写"
+FONT 9, "MS Shell Dlg", 400, 0, 0x86
+BEGIN
+    ICON            IDI_Trans,IDC_STATIC,6,7,20,20
+    LTEXT           "TransText 将从相关路径中读取翻译文件的内容，并回写到指定路径（支持通配符）的目标文件中。",IDC_STATIC,37,7,182,19
+    LTEXT           "路径(&P):",IDC_STATIC,6,36,29,8
+    EDITTEXT        IDC_Path,37,35,130,13,ES_AUTOHSCROLL | ES_NOHIDESEL
+    PUSHBUTTON      "...",IDC_Browse,169,35,13,12,BS_FLAT
+    CONTROL         "递归(&R)",IDC_Recursive,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,36,36,10
+    CONTROL         "不检查超长字符串(&N)",IDC_NoCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,37,57,97,10,WS_EX_TRANSPARENT
+END
+
+IDD_Search DIALOGEX 0, 0, 227, 100
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+CAPTION "搜索"
+FONT 9, "MS Shell Dlg", 400, 0, 0x86
+BEGIN
+    ICON            IDI_Search,IDC_STATIC,6,7,20,20
+    LTEXT           "请键入要搜索的路径（支持通配符）和查找/替换的内容（支持转义符），TransText 将为您搜索它。",IDC_STATIC,37,7,182,19
+    LTEXT           "路径(&P):",IDC_STATIC,6,36,29,8
+    EDITTEXT        IDC_Path,37,35,130,13,ES_AUTOHSCROLL | ES_NOHIDESEL
+    PUSHBUTTON      "...",IDC_Browse,169,35,13,12,BS_FLAT
+    CONTROL         "递归(&R)",IDC_Recursive,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,36,36,10
+    LTEXT           "查找(&F):",IDC_STATIC,6,56,29,8
+    EDITTEXT        IDC_Find,37,54,145,13,ES_AUTOHSCROLL | ES_NOHIDESEL
+    CONTROL         "询问(&K)",IDC_Confirm,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,56,36,10
+    LTEXT           "替换(&L):",IDC_STATIC,6,74,29,8
+    EDITTEXT        IDC_Replace,37,73,145,13,ES_AUTOHSCROLL | ES_NOHIDESEL,WS_EX_TRANSPARENT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_Main, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_Fetch, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 73
+        HORZGUIDE, 63
+    END
+
+    IDD_Trans, DIALOG
+    BEGIN
+    END
+
+    IDD_Search, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_Filter              "常用文件 (*.exe;*.dll;*.arsc)|*.exe;*.dll;*.arsc|所有文件 (*.*)|*.*|"
+    IDS_SmartVSVer          "检测到 Visual Studio 200%c 解决方案文件，是否要转换为 Visual Studio 200%c 格式（包括工程文件）？"
+    IDS_Help                "感谢 汉化新世纪 网友 乾 的意见和建议，不然早没心思更新这货了。"
+    IDS_SearchAsk           "文件: %s\n偏移: %#08X\n\n发现指定的字符串，是否要继续%s?"
+    MSG_FoundStr            "◎ 发现指定字符串: %s\r\n"
+    MSG_SearchAbort         "◇ 搜索已取消。\r\n"
+END
+
+STRINGTABLE
+BEGIN
+    MSG_TransOK             "◆ 已经成功回写字符串: %s\r\n"
+    MSG_FetchNothing        "◇ 未找到合适的字符串: %s\r\n"
+    MSG_FetchOK             "◆ 已经成功提取字符串: %s\r\n"
+    MSG_SearchOK            "◆ 已经完成字符串搜索: %s\r\n"
+    MSG_ExceedWStr          "◎ 截去超长字符串: %ls\r\n"
+    MSG_ExceedAStr          "◎ 字符串超长，超出部分将被截去: %hs\r\n"
+    MSG_FileNotFound        "◇ 没有找到文件: %s\r\n"
+    MSG_BStrNotMatch        "◎ 字符串长度校验不匹配: %08X\r\n"
+    ERR_Exception           "■ 处理过程中出现了严重错误！作者强烈建议您把文件“%s”和错误描述发送给到 Yonsm@msn.com。\r\n"
+    ERR_AllocMemory         "■ 内存分配失败: %s\r\n"
+    ERR_OpenFile            "■ 无法打开文件: %s\r\n"
+    ERR_MapFile             "■ 无法打开内存映射文件: %s\r\n"
+    ERR_SaveFile            "■ 无法保存文件: %s\r\n"
+    ERR_ShortSize           "■ 文件字节数太少: %s\r\n"
+    ERR_ExtName             "■ 没有扩展名，无法取得目标文件路径: %s\r\n"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_Fetch               "提取"
+    IDS_Trans               "回写"
+    IDS_Search              "搜索"
+    IDS_Replace             "替换"
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "Resource\\VER.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
